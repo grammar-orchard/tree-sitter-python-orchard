@@ -1,0 +1,145 @@
+================================================================================
+Simple template string
+================================================================================
+
+t"Hello, {name}!"
+
+--------------------------------------------------------------------------------
+
+(module
+  (docstring
+    (string_start)
+    (string_content)
+    (interpolation
+      (identifier))
+    (string_content)
+    (string_end)))
+
+================================================================================
+Template string with format spec
+================================================================================
+
+t"Price: {price:.2f}"
+
+--------------------------------------------------------------------------------
+
+(module
+  (docstring
+    (string_start)
+    (string_content)
+    (interpolation
+      (identifier)
+      (format_specifier))
+    (string_end)))
+
+================================================================================
+Raw template string
+================================================================================
+
+tr"Path: {path}\n"
+
+--------------------------------------------------------------------------------
+
+(module
+  (docstring
+    (string_start)
+    (string_content)
+    (interpolation
+      (identifier))
+    (string_content)
+    (string_end)))
+
+================================================================================
+Triple quoted template string
+================================================================================
+
+t"""
+Multi-line template
+with {variable}
+"""
+
+--------------------------------------------------------------------------------
+
+(module
+  (docstring
+    (string_start)
+    (string_content)
+    (interpolation
+      (identifier))
+    (string_content)
+    (string_end)))
+
+================================================================================
+Template string with multiple interpolations
+================================================================================
+
+t"Hello {first_name} {last_name}!"
+
+--------------------------------------------------------------------------------
+
+(module
+  (docstring
+    (string_start)
+    (string_content)
+    (interpolation
+      (identifier))
+    (string_content)
+    (interpolation
+      (identifier))
+    (string_content)
+    (string_end)))
+
+================================================================================
+Template string with expression
+================================================================================
+
+t"Result: {a + b}"
+
+--------------------------------------------------------------------------------
+
+(module
+  (docstring
+    (string_start)
+    (string_content)
+    (interpolation
+      (binary_operator
+        (identifier)
+        (identifier)))
+    (string_end)))
+
+================================================================================
+Template string with escaped braces
+================================================================================
+
+t"Use {{braces}} to escape"
+
+--------------------------------------------------------------------------------
+
+(module
+  (docstring
+    (string_start)
+    (string_content
+      (escape_interpolation)
+      (escape_interpolation))
+    (string_end)))
+
+================================================================================
+Template string with format spec (copy from f-string)
+================================================================================
+
+t"a {b:2} {c:34.5}"
+
+--------------------------------------------------------------------------------
+
+(module
+  (docstring
+    (string_start)
+    (string_content)
+    (interpolation
+      (identifier)
+      (format_specifier))
+    (string_content)
+    (interpolation
+      (identifier)
+      (format_specifier))
+    (string_end)))
