@@ -1,0 +1,107 @@
+================================================================================
+Bitwise AND binds tighter than XOR
+================================================================================
+
+a & b ^ c
+a ^ b & c
+
+--------------------------------------------------------------------------------
+
+(module
+  (binary_operator
+    (binary_operator
+      (identifier)
+      (identifier))
+    (identifier))
+  (binary_operator
+    (identifier)
+    (binary_operator
+      (identifier)
+      (identifier))))
+
+================================================================================
+Bitwise precedence and left associativity
+================================================================================
+
+a | b | c
+a | b ^ c
+a | b & c
+a ^ b | c
+a ^ b ^ c
+a ^ b & c
+a & b | c
+a & b ^ c
+a & b & c
+a << b & c
+a & b << c
+a + b ^ c
+a ^ b + c
+
+--------------------------------------------------------------------------------
+
+(module
+  (binary_operator
+    (binary_operator
+      (identifier)
+      (identifier))
+    (identifier))
+  (binary_operator
+    (identifier)
+    (binary_operator
+      (identifier)
+      (identifier)))
+  (binary_operator
+    (identifier)
+    (binary_operator
+      (identifier)
+      (identifier)))
+  (binary_operator
+    (binary_operator
+      (identifier)
+      (identifier))
+    (identifier))
+  (binary_operator
+    (binary_operator
+      (identifier)
+      (identifier))
+    (identifier))
+  (binary_operator
+    (identifier)
+    (binary_operator
+      (identifier)
+      (identifier)))
+  (binary_operator
+    (binary_operator
+      (identifier)
+      (identifier))
+    (identifier))
+  (binary_operator
+    (binary_operator
+      (identifier)
+      (identifier))
+    (identifier))
+  (binary_operator
+    (binary_operator
+      (identifier)
+      (identifier))
+    (identifier))
+  (binary_operator
+    (binary_operator
+      (identifier)
+      (identifier))
+    (identifier))
+  (binary_operator
+    (identifier)
+    (binary_operator
+      (identifier)
+      (identifier)))
+  (binary_operator
+    (binary_operator
+      (identifier)
+      (identifier))
+    (identifier))
+  (binary_operator
+    (identifier)
+    (binary_operator
+      (identifier)
+      (identifier))))

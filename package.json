@@ -1,8 +1,12 @@
 {
   "name": "tree-sitter-python-orchard",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Parser for Python files",
-  "repository": "https://codeberg.org/grammar-orchard/tree-sitter-python-orchard",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://codeberg.org/grammar-orchard/tree-sitter-python-orchard.git"
+  },
   "license": "MIT",
   "author": {
     "name": "Max Brunsfeld",
@@ -32,11 +36,11 @@
   },
   "devDependencies": {
     "prebuildify": "^6.0.1",
-    "tree-sitter": "^0.22.4",
-    "tree-sitter-cli": "^0.25.10"
+    "tree-sitter": "^0.25.0",
+    "tree-sitter-cli": "^0.26.12"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.22.4"
+    "tree-sitter": "^0.25.0"
   },
   "peerDependenciesMeta": {
     "tree-sitter": {
